@@ -93,11 +93,18 @@ public class ProductosController : ControllerBase
 
             if (productoExistente != null)
             {
-                if(!producto.Descripcion.IsNullOrEmpty()) productoExistente.Descripcion = producto.Descripcion;
-                if(!producto.Nombre.IsNullOrEmpty()) productoExistente.Nombre = producto.Nombre;
-                if(!producto.Imagen.IsNullOrEmpty()) productoExistente.Imagen = producto.Imagen;
-                if(producto.Precio!=null) productoExistente.Precio = producto.Precio;
-                if(producto.Stock != null) productoExistente.Stock = producto.Stock;
+                if (!producto.NumeroProducto.IsNullOrEmpty()) productoExistente.NumeroProducto = producto.NumeroProducto;
+                if (!producto.NombreProducto.IsNullOrEmpty()) productoExistente.NombreProducto = producto.NombreProducto;
+                if (!producto.Medidas.IsNullOrEmpty()) productoExistente.Medidas = producto.Medidas;
+                if (producto.Cantidad != null) productoExistente.Cantidad = producto.Cantidad;
+                if (producto.Peso != null) productoExistente.Peso = producto.Peso;
+                if (producto.Precio != null) productoExistente.Precio = producto.Precio;
+                if (!producto.TipoDeMoneda.IsNullOrEmpty()) productoExistente.TipoDeMoneda = producto.TipoDeMoneda;
+                if (!producto.Descripcion.IsNullOrEmpty()) productoExistente.Descripcion = producto.Descripcion;
+                if (producto.Stock != null) productoExistente.Stock = producto.Stock;
+                if (!producto.Imagen.IsNullOrEmpty()) productoExistente.Imagen = producto.Imagen;
+                if (!producto.RutaImagen.IsNullOrEmpty()) productoExistente.RutaImagen = producto.RutaImagen;
+                if (!producto.RutaImagenLocal.IsNullOrEmpty()) productoExistente.RutaImagenLocal = producto.RutaImagenLocal;
 
                 _context.Productos.Update(productoExistente);
                 await _context.SaveChangesAsync();

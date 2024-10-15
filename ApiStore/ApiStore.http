@@ -1,4 +1,5 @@
-@ApiStore_HostAddress = http://localhost:5154
+//Se Conecta por medio del Locla Host y la Api, para obtener los datos
+@ApiStore_HostAddress = https://localhost:7028
 
 GET {{ApiStore_HostAddress}}/weatherforecast/
 Accept: application/json
