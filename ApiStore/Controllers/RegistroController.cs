@@ -93,7 +93,7 @@ public class RegistroController : ControllerBase
 
             if (registroExistente != null)
             {
-                if (!registro.Usuario.IsNullOrEmpty()) registroExistente.Usuario = registro.Usuario;
+                if (!registro.Usuario.IsNullOrEmpty() ) registroExistente.Usuario = registro.Usuario;
                 if (!registro.Password.IsNullOrEmpty()) registroExistente.Password = registro.Password;
                 if (!registro.Email.IsNullOrEmpty()) registroExistente.Email = registro.Email;
                 if (!registro.Domicilio.IsNullOrEmpty()) registroExistente.Domicilio = registro.Domicilio;

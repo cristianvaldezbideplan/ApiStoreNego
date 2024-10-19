@@ -96,6 +96,7 @@ namespace ApiStore.Controllers
                     if (carritocompra.CostoTotal != null) CarritoCompraExistente.CostoTotal = carritocompra.CostoTotal;
                     if (carritocompra.Cantidad != null) CarritoCompraExistente.Cantidad = carritocompra.Cantidad;
                     if (!carritocompra.Descripcion.IsNullOrEmpty()) CarritoCompraExistente.Descripcion = carritocompra.Descripcion;
+                    carritocompra.Fecha = DateTime.Now;   
 
                     _context.CarritoCompra.Update(CarritoCompraExistente);
                     await _context.SaveChangesAsync();

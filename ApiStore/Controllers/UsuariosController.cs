@@ -1,5 +1,6 @@
 ﻿using ApiStore.Data;
 using ApiStore.Models;
+using ApiStore.Models.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
