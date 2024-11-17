@@ -10,6 +10,7 @@ GO
 /* PRODUCTOS */
 CREATE TABLE [dbo].[Productos](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdCategoria] [int] NULL,
 	[NumeroProducto] [varchar](50) NOT NULL,
 	[NombreProducto] [varchar](50) NULL,
 	[Medidas] [varchar](50) NULL,

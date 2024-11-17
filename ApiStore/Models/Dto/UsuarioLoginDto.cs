@@ -1,10 +1,10 @@
-﻿namespace ApiStore.Models.Dto
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ApiStore.Models.Dto;
+
+public class UsuarioLoginDto
 {
-    public class UsuarioLoginDto
-    {
+    public string Email { get; set; }
+    public string Password { get; set; }
 
-        public string? Email { get; set; }
-        public string? Password { get; set; }
-
-    }
 }

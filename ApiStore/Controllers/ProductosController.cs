@@ -1,5 +1,6 @@
 ﻿using ApiStore.Data;
 using ApiStore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ namespace ApiStore.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class ProductosController : ControllerBase
 {
     private readonly StoreDbContext _context;

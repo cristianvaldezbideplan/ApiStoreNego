@@ -1,20 +1,26 @@
 ﻿using ApiStore.Data;
 using ApiStore.Models;
 using ApiStore.Models.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace ApiStore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UsuariosController : ControllerBase
     {
         private readonly StoreDbContext _context;
 
-        public UsuariosController(StoreDbContext context)
+        public UsuariosController(StoreDbContext context, IConfiguration configuration)
         {
             _context = context;
         }
